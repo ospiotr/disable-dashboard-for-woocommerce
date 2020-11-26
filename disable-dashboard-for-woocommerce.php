@@ -404,6 +404,15 @@ if(!empty(get_option('wcbloat_wc_marketplace')) && (get_option('wcbloat_wc_marke
 add_filter( 'woocommerce_allow_marketplace_suggestions', '__return_false', 999 );
 }
 
+/* Disable Extensions submenu
+/***********************************************************************/
+if(!empty(get_option('wcbloat_remove_addon_submenu')) && (get_option('wcbloat_remove_addon_submenu') == 'yes')) {
+	add_action( 'admin_menu', 'wcbloat_remove_admin_addon_submenu', 999 );
+		function wcbloat_remove_admin_addon_submenu() {
+			remove_submenu_page( 'woocommerce', 'wc-addons');
+	}
+	}
+
 /* Disable WooCommerce Widgets
 /***********************************************************************/
 if(!empty(get_option('wcbloat_wc_widgets_disable')) && (get_option('wcbloat_wc_widgets_disable') == 'yes')) {
