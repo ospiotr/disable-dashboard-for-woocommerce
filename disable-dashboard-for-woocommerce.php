@@ -147,7 +147,7 @@ function wcbloat_all_settings( $settings, $current_section ) {
 		// Disable Extensions submenu
 		$settings_wcbloat[] = array(
 			'name'     => __( 'Extensions submenu', 'disable-dashboard-for-woocommerce' ),
-			'desc_tip' => __( 'Hide Extensions submenu in the WooCommerce menu in your admin panel menu.', 'disable-dashboard-for-woocommerce' ),
+			'desc_tip' => __( 'Hide Extensions submenu in the WooCommerce menu in your admin panel menu. <strong>Reload the page after saving changes to see the results.</strong>', 'disable-dashboard-for-woocommerce' ),
 			'id'       => 'wcbloat_remove_addon_submenu',
 			'type'     => 'checkbox',
 			'css'      => 'min-width:300px;',
@@ -190,14 +190,14 @@ function wcbloat_all_settings( $settings, $current_section ) {
 			'desc'     => __( 'Disable WooCommerce scripts and styles', 'disable-dashboard-for-woocommerce' ),
 		);
 		
-		// Disable WooCommerce Cart Fragmentation
+		// Disable WooCommerce Cart Fragments
 		$settings_wcbloat[] = array(
-			'name'     => __( 'WooCommerce Cart Fragmentation', 'disable-dashboard-for-woocommerce' ),
+			'name'     => __( 'WooCommerce Cart Fragments', 'disable-dashboard-for-woocommerce' ),
 			'desc_tip' => __( 'The cart fragments feature is used to update the cart total without refreshing the page. <strong>Warning:</strong> Disabling it will speed up your store, but may result in wrong calculations in mini cart. Use with caution.' ),
 			'id'       => 'wcbloat_wc_fragmentation_disable',
 			'type'     => 'checkbox',
 			'css'      => 'min-width:300px;',
-			'desc'     => __( 'Disable WooCommerce Cart Fragmentation', 'disable-dashboard-for-woocommerce' ),
+			'desc'     => __( 'Disable WooCommerce Cart Fragments', 'disable-dashboard-for-woocommerce' ),
 		);
 		
 
@@ -376,13 +376,13 @@ function wcbloat_disable_woocommerce_scripts() {
 	}
 }
 
-/* Disable WooCommerce Cart Fragmentation
+/* Disable WooCommerce Cart Fragments
 /***********************************************************************/
 if(!empty(get_option('wcbloat_wc_fragmentation_disable')) && (get_option('wcbloat_wc_fragmentation_disable') == 'yes')) {
-	add_action('wp_enqueue_scripts', 'wcbloat_disable_woocommerce_cart_fragmentation', 99);
+	add_action('wp_enqueue_scripts', 'wcbloat_disable_woocommerce_cart_fragments', 99);
 }
 
-function wcbloat_disable_woocommerce_cart_fragmentation() {
+function wcbloat_disable_woocommerce_cart_fragments() {
 	if(function_exists('is_woocommerce')) {
 		wp_dequeue_script('wc-cart-fragments');
 	}
