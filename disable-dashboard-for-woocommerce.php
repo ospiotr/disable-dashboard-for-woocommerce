@@ -144,6 +144,16 @@ function wcbloat_all_settings( $settings, $current_section ) {
 			'desc'     => __( 'Disable WooCommerce Marketplace Suggestions', 'disable-dashboard-for-woocommerce' ),
 		);
 		
+		// Disable Extensions submenu
+		$settings_wcbloat[] = array(
+			'name'     => __( 'Extensions submenu', 'disable-dashboard-for-woocommerce' ),
+			'desc_tip' => __( 'Hide Extensions submenu in the WooCommerce menu in your admin panel menu.', 'disable-dashboard-for-woocommerce' ),
+			'id'       => 'wcbloat_remove_addon_submenu',
+			'type'     => 'checkbox',
+			'css'      => 'min-width:300px;',
+			'desc'     => __( 'Disable Extensions submenu', 'disable-dashboard-for-woocommerce' ),
+		);
+		
 		$settings_wcbloat[] = array(
 			'type' => 'sectionend',
 			'id' => 'wcbloat_interface',
