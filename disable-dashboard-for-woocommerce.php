@@ -245,6 +245,16 @@ function wcbloat_all_settings( $settings, $current_section ) {
 			'css'      => 'min-width:300px;',
 			'desc'     => __( 'Disable SkyVerge Dashboard', 'disable-dashboard-for-woocommerce' ),
 		);
+		
+		// Disable Elementor overview Dashboard widget
+		$settings_wcbloat[] = array(
+			'name'     => __( 'Elementor Dashboard widget', 'disable-dashboard-for-woocommerce' ),
+			'desc_tip' => __( 'This option will disable Elementor overview <a href="/wp-admin/index.php">Dashboard</a> widget. Works only if you are using Elementor.', 'disable-dashboard-for-woocommerce' ),
+			'id'       => 'wcbloat_elementor_widget_disable',
+			'type'     => 'checkbox',
+			'css'      => 'min-width:300px;',
+			'desc'     => __( 'Disable Elementor Dashboard widget', 'disable-dashboard-for-woocommerce' ),
+		);
 	
 
 		$settings_wcbloat[] = array(
@@ -449,4 +459,13 @@ if(!empty(get_option('wcbloat_wc_skyverge_disable')) && (get_option('wcbloat_wc_
 
 	// remove dashboard stylesheet
 	add_action( 'admin_enqueue_scripts', function() { wp_dequeue_style( 'sv-wordpress-plugin-admin-menus' ); }, 20 );
+}
+
+	/* Disable Elementor Dashboard widget
+/***********************************************************************/
+if(!empty(get_option('wcbloat_elementor_widget_disable')) && (get_option('wcbloat_elementor_widget_disable') == 'yes')) {
+	function disable_elementor_dashboard_overview_widget() {
+		remove_meta_box( 'e-dashboard-overview', 'dashboard', 'normal');
+	}
+	add_action('wp_dashboard_setup', 'disable_elementor_dashboard_overview_widget', 40);
 }
