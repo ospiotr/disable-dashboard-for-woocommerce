@@ -2,16 +2,16 @@
 /**
  * Plugin Name: Disable WooCommerce Bloat
  * Description: Disable unnecessary WooCommerce features and make your shop faster and cleaner
- * Version: 2.3
+ * Version: 2.4
  * Author: ospiotr
  * Developer: ospiotr
  * Text Domain: disable-dashboard-for-woocommerce
  * Domain Path: /languages
  * Requires at least: 4.5
  * Tested up to: 5.6
- * Requires PHP: 7.0
+ * Requires PHP: 5.6
  * WC requires at least: 4.0
- * WC tested up to: 4.6
+ * WC tested up to: 4.8
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
