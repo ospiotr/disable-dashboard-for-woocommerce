@@ -3,10 +3,10 @@ Contributors: ospiotr
 Tags: woocommerce,remove dashboard,disable woocommerce admin,disable analytics,remove woocommerce bloat,remove woocommerce dashboard, skyverge
 Stable tag: trunk
 Requires at least: 5.0
-Tested up to: 5.5
-Requires PHP: 7.0
+Tested up to: 5.6
+Requires PHP: 5.6
 WC requires at least: 4.0
-WC tested up to: 4.7
+WC tested up to: 4.8
 Donate link: https://www.paypal.com/donate?hosted_button_id=VHFM47MRPMTYG
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -35,6 +35,7 @@ Make your admin panel faster and cleaner:
 - Disable WooCommerce.com notice (`Connect your store to WooCommerce.com to receive extensions updates and support.`)
 - Disable WooCommerce Status Meta Box
 - Disable Marketplace Suggestions
+- Disable WooCommerce Extensions submenu
 
 == Increase your site performance ==
 
@@ -42,13 +43,14 @@ Disable these options to make your shop faster:
 
 - Password Strength Meter
 - WooCommerce scripts and styles
-- WooCommerce Cart Fragmentation
+- WooCommerce Cart Fragments
 - WooCommerce Widgets
 
 Declutter your WordPress admin panel by removing third-party bloat:
 
 - SkyVerge Dashboard (only if you are using SkyVerge plugins)
 - Jetpack promotions (Jetpack-related notices that promote services like the backup services VaultPress or WordPress Apps. only if your are using Jetpack)
+- Elementor Dashboard overview widget (only if you are using Elementor)
 
 == USAGE ==
 Go to configuration page: <strong>WooCommerce -> Settings -> Advanced -> Disable WooCommerce Bloat</strong>.
@@ -84,6 +86,11 @@ If you want to completely get rid of WooCommerce Admin and make your database sm
 
 
 == Changelog ==
+
+= 2.4 =
+- Added option to disable Elementor Dashboard widget
+- Added option to disable WooCommerce Extensions admin submenu
+- Fixed Cart Fragments label
 
 = 2.3 =
 - Fixed field labels
