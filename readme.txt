@@ -6,7 +6,7 @@ Requires at least: 5.0
 Tested up to: 5.6
 Requires PHP: 5.6
 WC requires at least: 4.0
-WC tested up to: 4.8
+WC tested up to: 5.2
 Donate link: https://www.paypal.com/donate?hosted_button_id=VHFM47MRPMTYG
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -86,6 +86,9 @@ If you want to completely get rid of WooCommerce Admin and make your database sm
 
 
 == Changelog ==
+
+= 2.4.1 =
+- Added compatibility with WooCommerce 5.0
 
 = 2.4 =
 - Added option to disable Elementor Dashboard widget
