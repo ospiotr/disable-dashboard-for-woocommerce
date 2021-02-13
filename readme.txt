@@ -87,6 +87,9 @@ If you want to completely get rid of WooCommerce Admin and make your database sm
 
 == Changelog ==
 
+= 2.4.2 =
+- Fixed fatal error on Reports page in WooCommerce 5.0
+
 = 2.4.1 =
 - Added compatibility with WooCommerce 5.0
 
