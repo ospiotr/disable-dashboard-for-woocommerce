@@ -300,7 +300,24 @@ if(!empty(get_option('wcbloat_admin_disable', 'yes' )) && (get_option('wcbloat_a
 		return '#';
 	}
 	class WC_Notes_Run_Db_Update {}
-	// end fix
+	
+	
+	// 	fix for AutomateWoo
+
+	
+	function wc_admin_connect_page() {
+	return;
+	}
+
+
+	function wc_admin_register_page() {
+	return;
+	}
+
+
+	function wc_admin_is_registered_page() {
+	return;
+	}
 }}
 
 /* Marketing Hub

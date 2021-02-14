@@ -87,6 +87,9 @@ If you want to completely get rid of WooCommerce Admin and make your database sm
 
 == Changelog ==
 
+= 2.4.4 =
+- Fixed conflict with AutomateWoo
+
 = 2.4.3 =
 - Fixed error upon activation in WooCommerce 5.0
 
