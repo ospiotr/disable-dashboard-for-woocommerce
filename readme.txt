@@ -87,6 +87,9 @@ If you want to completely get rid of WooCommerce Admin and make your database sm
 
 == Changelog ==
 
+= 2.4.8 =
+- Fixed fatal error
+
 = 2.4.7 =
 - Fixed conflict with AutomateWoo
 
