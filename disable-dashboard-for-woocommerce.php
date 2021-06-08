@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Disable WooCommerce Bloat
  * Description: Disable unnecessary WooCommerce features and make your shop faster and cleaner
- * Version: 2.4.8
+ * Version: 2.4.9
  * Author: ospiotr
  * Developer: ospiotr
  * Text Domain: disable-dashboard-for-woocommerce
@@ -294,6 +294,10 @@ function wcbloat_all_settings( $settings, $current_section ) {
 if(!empty(get_option('wcbloat_admin_disable', 'yes' )) && (get_option('wcbloat_admin_disable', 'yes' ) == 'yes')){
 	add_filter( 'woocommerce_admin_disabled', '__return_true' );
 	
+	if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+    if ( version_compare( 'WC_VERSION', '4.4', '>' ) ) {
+        // Old version code (example)
+        	
 	// fix for wc_admin_url in WooCommerce 5.0
 	if ( ! function_exists( 'wc_admin_url') ) {
 	function wc_admin_url( $path ) {
@@ -318,7 +322,13 @@ if(!empty(get_option('wcbloat_admin_disable', 'yes' )) && (get_option('wcbloat_a
 	function wc_admin_is_registered_page() {
 	return;
 	}
-}}
+}
+    } else {
+        // New version code (example)
+
+    }
+}
+}
 
 /* Marketing Hub
 /***********************************************************************/
