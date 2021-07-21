@@ -3,10 +3,10 @@ Contributors: ospiotr
 Tags: woocommerce,remove dashboard,disable woocommerce admin,disable analytics,remove woocommerce bloat,remove woocommerce dashboard, skyverge
 Stable tag: trunk
 Requires at least: 5.0
-Tested up to: 5.6
+Tested up to: 5.8
 Requires PHP: 5.6
 WC requires at least: 4.0
-WC tested up to: 5.4
+WC tested up to: 5.6
 Donate link: https://www.paypal.com/donate?hosted_button_id=VHFM47MRPMTYG
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -87,8 +87,13 @@ If you want to completely get rid of WooCommerce Admin and make your database sm
 
 == Changelog ==
 
+= 2.5.0 =
+- Removed WC-admin message from the standard Reports page
+- Added compatibility with WooCommerce 5.5
+- Added compatibility with WordPress 5.8
+
 = 2.4.10 =
-= Fixed WooCommerce Status Meta Box
+- Fixed WooCommerce Status Meta Box
 
 = 2.4.9 =
 - Added better compatibility with WooCommerce 5.4
